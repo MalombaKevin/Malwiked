@@ -38,8 +38,8 @@ const SERVICES = {
   }
 };
 
-const WHATSAPP_NUMBER = "254700000000"; // TODO: replace with real WhatsApp number
-const CONTACT_EMAIL = "hello@malwiketech.com"; // TODO: replace with real email
+const WHATSAPP_NUMBER = "254759700444"; // TODO: replace with real WhatsApp number
+const CONTACT_EMAIL = "malwike.tech@gmail.com"; // TODO: replace with real email
 
 // ---- Our Work data (replace youtubeId with your real video IDs) ----
 const WORK_ITEMS = {
@@ -74,6 +74,12 @@ const WORK_ITEMS = {
 const filterButtons = document.querySelectorAll(".filter-btn");
 const workItems = document.querySelectorAll(".work-item");
 
+function applyWorkFilter(filter) {
+  workItems.forEach(item => {
+    item.classList.toggle("hidden", item.dataset.category !== filter);
+  });
+}
+
 filterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     filterButtons.forEach(b => {
@@ -82,14 +88,13 @@ filterButtons.forEach(btn => {
     });
     btn.classList.add("active");
     btn.setAttribute("aria-pressed", "true");
-
-    const filter = btn.dataset.filter;
-    workItems.forEach(item => {
-      const match = filter === "all" || item.dataset.category === filter;
-      item.classList.toggle("hidden", !match);
-    });
+    applyWorkFilter(btn.dataset.filter);
   });
 });
+
+// Apply whichever tab is marked active by default on page load
+const defaultFilterBtn = document.querySelector(".filter-btn.active");
+if (defaultFilterBtn) applyWorkFilter(defaultFilterBtn.dataset.filter);
 
 // ---- Footer year ----
 document.getElementById("year").textContent = new Date().getFullYear();
