@@ -4,7 +4,7 @@ const SERVICES = {
     title: "Web Development",
     description:
       "We design and build fast, responsive websites and web applications — from landing pages to full products. Clean code, thoughtful UX, and performance that holds up on any device.",
-       video: "https://www.youtube.com/embed/SM_MBfm5qK4?si=BREJDcGWPPx6ff6c", 
+       video: "https://www.youtube.com/embed/InR3hao6qlA?si=0wp_ravUE-G2hM_8", 
     whatsappText: "Hi Malwike Technologies, I'd like to talk about Web Development."
   },
   social: {
@@ -12,7 +12,7 @@ const SERVICES = {
     title: "Social Media Management",
     description:
       "Strategy, content calendars and day-to-day management that keep your brand consistent, active and growing across every platform so you can focus on running the business.",
-       video: "https://www.youtube.com/embed/SM_MBfm5qK4?si=BREJDcGWPPx6ff6c", 
+       video: "https://www.youtube.com/embed/wQ5iY7yMVvA?si=1Hyc58daRRIaKMGl", 
     whatsappText: "Hi Malwike Technologies, I'd like to talk about Social Media Management."
   },
   music: {
